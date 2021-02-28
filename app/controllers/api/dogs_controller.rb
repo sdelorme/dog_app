@@ -9,9 +9,9 @@ class Api::DogsController < ApplicationController
     name: params[:name],
     age: params[:age],
     color: params[:color],
-    sex: params [:sex]  
+    sex: params[:sex],  
     )
     @dog.save
-    render 'index.json.jb'
+    render 'show.json.jb'
   end
 end
