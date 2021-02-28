@@ -8,4 +8,3 @@
 
 dog = Dog.new(breed: "Bernedoodle", name: "Moose", age: 3, color: "brown, white, black", sex: "Male")
 dog.save
-git 

@@ -2,7 +2,7 @@
   {
   id: dog.id,
   breed: dog.breed,
-  name: dog.name.
+  name: dog.name,
   age: dog.age,
   sex: dog.sex,
   color: dog.color
