@@ -31,5 +31,10 @@ class Api::DogsController < ApplicationController
     @dog.color = params[:color] || @dog.color
     @dog.save
     render 'show.json.jb'
-  end  
+  end
+  def destroy
+    @dog = Dog.find_by(id: params[:id])
+    @dog.destroy
+    render json: {message: "oops! you deleted this dog"}
+  end   
 end
