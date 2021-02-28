@@ -22,4 +22,14 @@ class Api::DogsController < ApplicationController
     end
     render 'show.json.jb'
   end
+  def update
+    @dog = Dog.find_by(id: params[:id])
+    @dog.breed = params[:breed] || @dog.breed
+    @dog.name = params[:name] || @dog.name
+    @dog.age = params[:age] || @dog.age
+    @dog.sex = params[:sex] || @dog.sex
+    @dog.color = params[:color] || @dog.color
+    @dog.save
+    render 'show.json.jb'
+  end  
 end
