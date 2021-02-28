@@ -14,4 +14,12 @@ class Api::DogsController < ApplicationController
     @dog.save
     render 'show.json.jb'
   end
+  def show
+    if params[:id].to_i < Dog.count
+      @dog = Dog.find_by(id: params[:id])
+    else
+      @dog = Dog.new
+    end
+    render 'show.json.jb'
+  end
 end
